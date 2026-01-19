@@ -306,6 +306,55 @@ header .nav-menu ul li a {
     color: #00FF88;
 }
 
+/* Host Section style */
+#host {
+    background-color: var(--color-dark-purple);
+}
+
+.host-info-container {
+    background-color: var(--color-purple);
+    padding: 40px;
+    border-radius: 40px;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    color: #fff;
+}
+
+.host-info h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.host-info p {
+    margin: 1rem 0;
+    opacity: 0.7;
+    line-height: 24px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 8px;
+}
+
+.icon-box {
+    border: 1px solid #533C72;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+}
+.social-icons img {
+    max-width: 24px;
+    max-width: 24px;
+    width: 100%;
+    padding: 5px;
+    object-fit: contain;
+}
+
 @media (max-width: 576px) {
     header .logo a {
         font-size: 1.825rem;
@@ -395,5 +444,23 @@ header .nav-menu ul li a {
     }
     .featured-episodes-box-content h4 {
         font-size: 20px;
+    }
+
+    .host-info-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+    }
+
+    .host-info-container img {
+        width: 150px;
+        height: 150px;
+    }
+    .host-info h4 {
+        font-size: 1.5rem;
+    }
+
+    .social-icons {
+        justify-content: center;
     }
 }
