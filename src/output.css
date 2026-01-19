@@ -81,14 +81,18 @@ header nav {
     padding: 1.5rem 1rem;
 }
 
-header .logo a {
+header .logo a, #footer .logo a {
     font-size: 42px;
     color: #fff;
     text-decoration: none;
     font-weight: 700;
 }
 
-header .logo a>span {
+#footer .logo a {
+    font-size: 60px;
+}
+
+header .logo a>span, #footer .logo a>span {
     background: var(--color-bg-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -124,6 +128,15 @@ header .nav-menu ul li a {
 
 .hero-container {
     max-width: 550px;
+}
+
+.microphone {
+    animation-name: spinning;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    animation-delay: 0;
+    animation-timing-function: linear;
+    transition: 2s;
 }
 
 .hero-img {
@@ -309,6 +322,7 @@ header .nav-menu ul li a {
 /* Host Section style */
 #host {
     background-color: var(--color-dark-purple);
+    padding-bottom: 100px;
 }
 
 .host-info-container {
@@ -319,6 +333,7 @@ header .nav-menu ul li a {
     gap: 24px;
     align-items: center;
     color: #fff;
+    margin-top: 40px;
 }
 
 .host-info h4 {
@@ -353,6 +368,35 @@ header .nav-menu ul li a {
     width: 100%;
     padding: 5px;
     object-fit: contain;
+}
+
+#footer {
+    padding: 120px 0;
+    background: url('./../assets/footer-bg.png');
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+}
+
+.media-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 1rem 0;
+}
+
+.media-icon {
+    display: flex;
+    color: #fff;
+    opacity: 0.8;
+    gap: 1rem;
+}
+
+.copyright p {
+    color: #fff;
+    color: #fff;
+    opacity: 0.7;
+    margin-top: 2rem;
 }
 
 @media (max-width: 576px) {
@@ -421,9 +465,13 @@ header .nav-menu ul li a {
         font-size: 1rem;
     }
 
+    #why-choose {
+        padding: 50px 0;
+    }
+
     .why-choose-grid {
         grid-template-columns: repeat(1, 1fr);
-        margin-top: 1rem;
+        margin-top: 2rem;
         gap: 1.5rem;
     }
 
@@ -437,6 +485,10 @@ header .nav-menu ul li a {
     }
     .why-choose-grid .box h4 {
         font-size: 22px;
+    }
+
+    #featured-episodes {
+        padding: 50px 0;
     }
 
     .featured-boxes {
@@ -462,5 +514,36 @@ header .nav-menu ul li a {
 
     .social-icons {
         justify-content: center;
+    }
+
+    #footer {
+        background-size: 100% 100%;
+        padding: 40px 20px;
+    }
+
+    #footer .logo a {
+        font-size: 3rem;
+    }
+    .media-icons {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 1rem auto;
+        gap: 1rem;
+        justify-items: center;
+        width: 70%;
+    }
+
+    .media-icon {
+        place-self: center;
+    }
+}
+
+@keyframes spinning {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
     }
 }
