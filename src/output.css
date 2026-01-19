@@ -51,6 +51,16 @@
     border: 1px solid #00FF88;
 }
 
+.section-title {
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #fff;
+}
+
+/* Shared style end */
+
 body {
     height: 100vh;
     background-image: var(--color-bg-gradient);
@@ -180,12 +190,6 @@ header .nav-menu ul li a {
     margin-bottom: 4rem;
 }
 
-.about-top-content h1 {
-    font-size: 48px;
-    font-weight: 800;
-    margin-bottom: 1rem;
-}
-
 .about-top-content p {
     font-size: 1rem;
     margin-bottom: 1rem;
@@ -211,6 +215,56 @@ header .nav-menu ul li a {
     font-size: 1rem;
     text-transform: uppercase;
     color: #fff;
+}
+
+/* Why Choose TechWave */
+#why-choose {
+    background-color: var(--color-purple);
+    padding: 100px 0;
+}
+
+.why-choose-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.why-choose-grid .box {
+    background-color: rgba(53, 17, 101, 0.4);
+    border-radius: 40px;
+    padding: 40px;
+}
+
+.why-choose-grid .box img {
+    max-width: 60px;
+    width: 100%;
+}
+
+.why-choose-grid .box h4 {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 1rem 0;
+}
+
+.why-choose-grid .box p {
+    font-size: 1rem;
+    color: #fff;
+    line-height: 24px;
+}
+
+.audio-quality-box {
+    grid-row: span 2;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: left;
+}
+
+.mobile-friendly, .global-community, .exclusive-interview {
+    grid-column: span 2;
 }
 
 @media (max-width: 576px) {
@@ -253,8 +307,8 @@ header .nav-menu ul li a {
         margin-top: 1rem;
     }
 
-    .hero-content h1 {
-        font-size: 40px;
+    .section-title {
+        font-size: 2rem;
     }
 
     #about {
@@ -277,5 +331,23 @@ header .nav-menu ul li a {
 
     .stats .box p {
         font-size: 1rem;
+    }
+
+    .why-choose-grid {
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: 1rem;
+        gap: 1.5rem;
+    }
+
+    .why-choose-grid .box {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    .why-choose-grid .box img{
+        max-width: 50px;
+    }
+    .why-choose-grid .box h4 {
+        font-size: 22px;
     }
 }
